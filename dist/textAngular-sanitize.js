@@ -514,6 +514,10 @@ function validStyles(styleAttr){
 					|| value.match(/^[a-z]*$/i)
 				)
 			||
+                (key.contains('padding') ) && (
+                    value.match(/[0-9\.]*(px|em|rem|%)/)
+                )
+            ||
 				key === 'text-align' && (
 					value === 'left'
 					|| value === 'right'
